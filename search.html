@@ -1,5 +1,6 @@
 <html>
     <link rel="stylesheet" href="general.css">
+    <script src="search.js"></script>
     <body>
         <div class="header">
             <span style="color:#004E98;">Library </span>
@@ -8,10 +9,35 @@
         <br>
         <div style="margin: auto; width: fit-content;">
             <form action="result.html" method="get">
+            <!-- <form action="search.html" method="get"> -->
                 <label for="searchL" style="color: #FF6700; margin-bottom: 0%; font-size: x-large;"><b>Search</b></label>
                 <br>
                 <input class="form-text-input" type="text" name="search" id="searchL" placeholder="Enter Book Number, Title, or Author" required>
-                <button type="submit">Search</button>
+                <button type="submit" onclick="searchBook(this.form)">Search</button>
+                <br>
+                <div class="dropdown">
+                    <button type="button">Advanced Search</button>
+                    <div id="advancedSearch" class="dcontent">
+                        <label for="bookDateS">Published Date:</label>
+                        <select name="bookDate" id="bookDateS">
+                            <option value="-2000">Before 2000</option>
+                            <option value="2001-2005">2001-2005</option>
+                            <option value="2006-2010">2006-2010</option>
+                            <option value="2011-2015">2011-2015</option>
+                            <option value="2016-2020">2016-2020</option>
+                            <option value="2021-">2021-Present</option>
+                        </select>
+                        <br>
+                        <label for="bookTypeFictionL">Book Type:</label>
+                        <br>
+                        <input type="radio" name="book_type" id="bookTypeFictionS" value="fiction">
+                        <label for="bookTypeFictionS">Fiction</label>
+                        <input type="radio" name="book_type" id="bookTypeNonFictionS" value="nonfiction">
+                        <label for="bookTypeNonFictionS">Non-Fiction</label>
+                        <input type="radio" name="book_type" id="bookTypeGraphicNovelS" value="graphicnovel">
+                        <label for="bookTypeGraphicNovelS">Graphic Novel</label>
+                    </div>
+                </div>
             </form>
         </div>
     </body>

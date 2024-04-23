@@ -1,14 +1,18 @@
 <html>
-    <link rel="stylesheet" href="general.css">
+    <head>
+        <script src="add_book.js"></script>
+        <link rel="stylesheet" href="general.css">
+    </head>
     <body>
         <div class="header">
-            <span style="color:#004E98;">Add </span>
+            <a href="search.html"><img src="icons/exit.png" class='hbutt' alt="exit"></a>
+            <span style="color:#004E98;" class="htxt">Add</span>
             <span>Book</span>
         </div>
         <br>
         <!-- REPLACE V -->
         <div class="form-bg">
-            <form action="add_book.html" method="get"> 
+            <form> 
                 <input class="form-text-input" type="text" name="title" id="bookTitleL" placeholder="Title" required>
                 <br>
                 <input class="form-text-input" type="text" name="author" id="bookAuthorL" placeholder="Author" required>
@@ -16,14 +20,16 @@
                 <input class="form-text-input" type="number" name="book_id" id="bookIdL" placeholder="Book #" required>
                 <br>
                 <label for="bookDateL">Date Published:</label>
-                <select name="book_date" id="bookDateL">
-                    <option value="2000">Before 2000</option>
-                    <option value="2005">2001-2005</option>
-                    <option value="2010">2006-2010</option>
-                    <option value="2015">2011-2015</option>
-                    <option value="2020">2016-2020</option>
-                    <option value="2024">2021-Present</option>
+                <select name="bookDate" id="bookDateL">
+                    <option value="-2000">Before 2000</option>
+                    <option value="2001-2005">2001-2005</option>
+                    <option value="2006-2010">2006-2010</option>
+                    <option value="2011-2015">2011-2015</option>
+                    <option value="2016-2020">2016-2020</option>
+                    <option value="2021-">2021-Present</option>
                 </select>
+                <br>
+                <label for="bookTypeFictionL">Book Type:</label>
                 <br>
                 <input type="radio" name="book_type" id="bookTypeFictionL" value="fiction">
                 <label for="bookTypeFictionL">Fiction</label>
@@ -32,12 +38,11 @@
                 <input type="radio" name="book_type" id="bookTypeGraphicNovelL" value="graphicnovel">
                 <label for="bookTypeGraphicNovelL">Graphic Novel</label>
                 <br>
-                <label for="bookCoverL">Book Cover:</label>
-                <input type="file" name="book_cover" id="bookCoverL">
-                <br>
-                <input type="submit" value="Add Book">
+                <!-- <label for="bookCoverL">Book Cover:</label>
+                <input type="file" name="book_cover" id="bookCoverL" accept=".jpg .jpeg .png">
+                <br> -->
+                <button type="submit" onclick="addNewBook(this.form)">Submit</button>
             </form>
         </div>
-            
     </body>
 </html>
