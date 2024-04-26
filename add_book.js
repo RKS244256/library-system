@@ -7,16 +7,6 @@ var libTechType;
 
 if (typeof(Storage) !== "undefined") {
     console.log('Woah, you have a browser that\'s not from 1995')
-    if(localStorage.getItem('fs')){
-       console.log('Woah, you are here') 
-    } else {
-        localStorage.setItem('fs', 'AHHHHHHHHHHHH')
-        localStorage.setItem('bookTitles', '')
-        localStorage.setItem('bookAuthors', '')
-        localStorage.setItem('bookIDs', '')
-        localStorage.setItem('bookDate', '')
-        localStorage.setItem('bookType', '')
-    }
 } else {
     console.log('No webstorage available. Bro is running a browser with a skill issue fr.')
 }
