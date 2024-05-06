@@ -17,17 +17,11 @@ function addNewBook(bookForm){
     libTechBookID = bookForm.bookIdL.value;
     libTechDatePub = bookForm.bookDateL.value;
     libTechType = bookForm.book_type.value;
-    localStorage.setItem('bookTitles', libTechBookTitle.toLowerCase())
-    localStorage.setItem('bookAuthors', libTechAuthor.toLowerCase())
-    localStorage.setItem('bookIDs', libTechBookID.toLowerCase())
-    localStorage.setItem('bookDate', libTechDatePub.toLowerCase())
-    localStorage.setItem('bookType', libTechType.toLowerCase())
-    // alert(libTechBookTitle);
-    // alert(libTechAuthor);
-    // alert(libTechBookID);
-    // alert(libTechDatePub);
-    // alert(libTechType);
-
+    localStorage.setItem('bookTitles', libTechBookTitle)
+    localStorage.setItem('bookAuthors', libTechAuthor)
+    localStorage.setItem('bookIDs', libTechBookID)
+    localStorage.setItem('bookDate', libTechDatePub)
+    localStorage.setItem('bookType', libTechType)
 }
 
 
