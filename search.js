@@ -29,16 +29,14 @@ if (typeof(Storage) !== "undefined") {
 // }
 
 function searchBook(bookForm){
-    libTechBookSearch = bookForm.searchS.value;
-    libTechBookSearchTitle = bookForm.searchModeTitleS.checked;
-    libTechBookSearchAuthor = bookForm.searchModeAuthorS.checked;
-    libTechBookSearchId = bookForm.searchModeIdS.checked;
+    libTechBookNumSearch = bookForm.searchNum.value;
+    libTechBookTitleSearch = bookForm.searchTitle.value;
+    libTechBookAuthorSearch = bookForm.searchAuthor.value;
     libTechDatePubSearch = bookForm.bookDateS.value;
     libTechTypeSearch = bookForm.book_type.value;
-    localStorage.setItem('bookSearch', libTechBookSearch)
-    localStorage.setItem('bookSearchTitle', libTechBookSearchTitle)
-    localStorage.setItem('bookSearchAuthor', libTechBookSearchAuthor)
-    localStorage.setItem('bookSearchId', libTechBookSearchId)
+    localStorage.setItem('bookSearchNum', libTechBookNumSearch)
+    localStorage.setItem('bookSearchTitle', libTechBookTitleSearch)
+    localStorage.setItem('bookSearchAuthor', libTechBookAuthorSearch)
     localStorage.setItem('bookDateSearch', libTechDatePubSearch)
     localStorage.setItem('bookTypeSearch', libTechTypeSearch)
 }
