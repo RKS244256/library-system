@@ -1,27 +1,36 @@
-var libTechBookTitle;
-var libTechAuthor;
-var libTechBookID;
-var libTechDatePub;
-var libTechType;
-// var libTechCover;
+
+if (localStorage.getItem("bookTitles")){
+    var libTechBookTitle = JSON.parse(localStorage.getItem("bookTitles"))
+    var libTechAuthor = JSON.parse(localStorage.getItem("bookAuthors"));
+    var libTechBookID = JSON.parse(localStorage.getItem("bookIDs"));
+    var libTechDatePub = JSON.parse(localStorage.getItem("bookDate"));
+    var libTechType = JSON.parse(localStorage.getItem("bookType"));
+} else {
+    var libTechBookTitle = [];
+    var libTechAuthor = [];
+    var libTechBookID = [];
+    var libTechDatePub = [];
+    var libTechType = [];
+}
 
 if (typeof(Storage) !== "undefined") {
-    console.log('Woah, you have a browser that\'s not from 1995')
+    console.log('Woah, you have a browser that\'s not from 1995');
 } else {
-    console.log('No webstorage available. Bro is running a browser with a skill issue fr.')
+    console.log('No webstorage available. Bro is running a browser with a skill issue fr.');
 }
 
 function addNewBook(bookForm){
-    libTechBookTitle = bookForm.bookTitleL.value;
-    libTechAuthor = bookForm.bookAuthorL.value;
-    libTechBookID = bookForm.bookIdL.value;
-    libTechDatePub = bookForm.bookDateL.value;
-    libTechType = bookForm.book_type.value;
-    localStorage.setItem('bookTitles', libTechBookTitle)
-    localStorage.setItem('bookAuthors', libTechAuthor)
-    localStorage.setItem('bookIDs', libTechBookID)
-    localStorage.setItem('bookDate', libTechDatePub)
-    localStorage.setItem('bookType', libTechType)
+    libTechBookTitle.push(bookForm.bookTitleL.value);
+    console.log(libTechBookTitle)
+    libTechAuthor.push(bookForm.bookAuthorL.value);
+    libTechBookID.push(bookForm.bookIdL.value);
+    libTechDatePub.push(bookForm.bookDateL.value);
+    libTechType.push(bookForm.book_type.value);
+    localStorage.setItem('bookTitles', JSON.stringify(libTechBookTitle));
+    localStorage.setItem('bookAuthors', JSON.stringify(libTechAuthor));
+    localStorage.setItem('bookIDs', JSON.stringify(libTechBookID));
+    localStorage.setItem('bookDate', JSON.stringify(libTechDatePub));
+    localStorage.setItem('bookType', JSON.stringify(libTechType));
 }
 
 
