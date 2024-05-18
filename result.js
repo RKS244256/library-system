@@ -63,5 +63,24 @@ function displaySpecificResult(){
         console.log(i, accepted)
         console.log()
     }
-    alert(results);
+    for(i=0;i<results.length;i++){
+        var rdiv = document.createElement('div');
+        rdiv.id = 'block';
+        document.getElementsByTagName('body')[0].appendChild(rdiv);
+        var title = document.createElement('p');
+        rdiv.appendChild(title);
+        title.innerHTML = results[i][0];
+        var author = document.createElement('p');
+        rdiv.appendChild(author);
+        author.innerHTML = results[i][1];
+        var id = document.createElement('p');
+        rdiv.appendChild(id);
+        id.innerHTML = results[i][2];
+        var type = document.createElement('p');
+        rdiv.appendChild(type);
+        type.innerHTML = results[i][3];
+        var date = document.createElement('p');
+        rdiv.appendChild(date);
+        date.innerHTML = results[i][4];
+    }
 }
