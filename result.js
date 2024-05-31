@@ -83,4 +83,7 @@ function displaySpecificResult(){
         rdiv.appendChild(date);
         date.innerHTML = results[i][4];
     }
+    var nr = document.createElement('p');
+    nr.innerHTML = "No more results :("
+    document.getElementsByTagName('body')[0].appendChild(nr);
 }
