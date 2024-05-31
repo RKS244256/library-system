@@ -1,9 +1,5 @@
 // Library Info
-var libTitles = JSON.parse(localStorage.getItem("bookTitles"));
-var libAuthors = JSON.parse(localStorage.getItem("bookAuthors"));
-var libIds = JSON.parse(localStorage.getItem("bookIDs"));
-var libDatePubs = JSON.parse(localStorage.getItem("bookDate"));
-var libTypes = JSON.parse(localStorage.getItem("bookType"));
+var libBooks = JSON.parse(localStorage.getItem("libBooks"))
 // Search
 var bookSearch = localStorage.getItem("bookSearch").toLowerCase();
 var bookSearchTitle = localStorage.getItem("bookSearchTitle");
@@ -17,48 +13,49 @@ var bookSearchTypeGraphicNovel = localStorage.getItem("bookTypeSearchGraphicNove
 let results = [];
 
 function displaySpecificResult(){
-    for(i=0;i<libTitles.length;i++){
-        accepted = true;
-        console.log(libTitles[i])
-        if(bookSearchTitle === "true" && bookSearch !== libTitles[i].toLowerCase()){
+    for(i=0;i<libBooks.length;i++){
+        var accepted;
+        console.log(libBooks[i][0])
+        if(bookSearchTitle === "true" && bookSearch === libBooks[i][0].toLowerCase()){
+            accepted = true;
+        }  else {
             accepted = false;
         }
         console.log(i, accepted)
-        if(bookSearchAuthor === "true" && bookSearch === libAuthors[i].toLowerCase()){
+        if(bookSearchAuthor === "true" && bookSearch === libBooks[i][1].toLowerCase()){
             accepted = true;
         }
         console.log(i, accepted)
-        if(bookSearchId === "true" && bookSearch === libIds[i]){
+        if(bookSearchId === "true" && bookSearch === libBooks[i][2]){
             accepted = true;
         }
         console.log(i, accepted)
         if(bookSearchTitle === "false" && bookSearchAuthor === "false" && bookSearchId === "false"){
-            if(bookSearch === libTitles[i].toLowerCase() || bookSearch === libAuthors[i].toLowerCase() || bookSearch === libIds[i]){
+            if(bookSearch === libBooks[i][0].toLowerCase() || bookSearch ===libBooks[i][1].toLowerCase() || bookSearch === libBooks[i][2]){
                 accepted = true;
             } else {
                 accepted = false;
             }
         }
         console.log(i, accepted)
-        if(bookSearchDate !== "na" && bookSearchDate !== libDatePubs[i] && accepted){
+        if(bookSearchDate !== "na" && bookSearchDate !== libBooks[i][3] && accepted){
             accepted = false;
         }
         console.log(i, accepted)
-        if(bookSearchTypeFiction === "true" && libTypes[i] !== "fiction" && accepted){
+        if(bookSearchTypeFiction === "true" && libBooks[i][4] !== "fiction" && accepted){
             accepted = false;
         }
         console.log(i, accepted)
-        if(bookSearchTypeNonFiction === "true" && libTypes[i] !== "nonfiction" && accepted){
+        if(bookSearchTypeNonFiction === "true" && libBooks[i][4]  !== "nonfiction" && accepted){
             accepted = false;
         }
         console.log(i, accepted)
-        if(bookSearchTypeGraphicNovel === "true" && libTypes[i] !== "graphicnovel" && accepted){
+        if(bookSearchTypeGraphicNovel === "true" && libBooks[i][4]  !== "graphicnovel" && accepted){
             accepted = false;
         }
         console.log(i, accepted)
         if (accepted){
-            var result = [libTitles[i], libAuthors[i], libIds[i], libDatePubs[i], libTypes[i]];
-            results.push(result);
+            results.push(libBooks[i]);
         }
         console.log(i, accepted)
         console.log()
