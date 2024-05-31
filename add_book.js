@@ -1,16 +1,8 @@
 
-if (localStorage.getItem("bookTitles")){
-    var libTechBookTitle = JSON.parse(localStorage.getItem("bookTitles"))
-    var libTechAuthor = JSON.parse(localStorage.getItem("bookAuthors"));
-    var libTechBookID = JSON.parse(localStorage.getItem("bookIDs"));
-    var libTechDatePub = JSON.parse(localStorage.getItem("bookDate"));
-    var libTechType = JSON.parse(localStorage.getItem("bookType"));
+if (localStorage.getItem("libBooks")){
+    var libBooks = JSON.parse(localStorage.getItem("libBooks"))
 } else {
-    var libTechBookTitle = [];
-    var libTechAuthor = [];
-    var libTechBookID = [];
-    var libTechDatePub = [];
-    var libTechType = [];
+    var libBooks = [];
 }
 
 if (typeof(Storage) !== "undefined") {
@@ -20,17 +12,9 @@ if (typeof(Storage) !== "undefined") {
 }
 
 function addNewBook(bookForm){
-    libTechBookTitle.push(bookForm.bookTitleL.value);
-    console.log(libTechBookTitle)
-    libTechAuthor.push(bookForm.bookAuthorL.value);
-    libTechBookID.push(bookForm.bookIdL.value);
-    libTechDatePub.push(bookForm.bookDateL.value);
-    libTechType.push(bookForm.book_type.value);
-    localStorage.setItem('bookTitles', JSON.stringify(libTechBookTitle));
-    localStorage.setItem('bookAuthors', JSON.stringify(libTechAuthor));
-    localStorage.setItem('bookIDs', JSON.stringify(libTechBookID));
-    localStorage.setItem('bookDate', JSON.stringify(libTechDatePub));
-    localStorage.setItem('bookType', JSON.stringify(libTechType));
+    var book = [bookForm.bookTitleL.value, bookForm.bookAuthorL.value, bookForm.bookIdL.value, bookForm.bookDateL.value, bookForm.book_type.value]
+    libBooks.push(book);
+    localStorage.setItem('libBooks', JSON.stringify(libBooks));
 }
 
 
