@@ -2,8 +2,10 @@ var libTechBookTitleSearch;
 var libTechAuthorSearch;
 var libTechBookIDSearch;
 var libTechDatePubSearch;
-var libTechTypeSearch;
-var libTechBookSearchMode
+var libTechTypeSearchFiction;
+var libTechTypeSearchNonFiction;
+var libTechTypeSearchGraphicNovel;
+var libTechBookSearchMode;
 
 // var libTechBookSearch
 
@@ -34,13 +36,17 @@ function searchBook(bookForm){
     libTechBookSearchAuthor = bookForm.searchModeAuthorS.checked;
     libTechBookSearchId = bookForm.searchModeIdS.checked;
     libTechDatePubSearch = bookForm.bookDateS.value;
-    libTechTypeSearch = bookForm.book_type.value;
+    libTechTypeSearchFiction = bookForm.bookTypeFictionS.checked;
+    libTechTypeSearchNonFiction = bookForm.bookTypeNonFictionS.checked;
+    libTechTypeSearchGraphicNovel = bookForm.bookTypeGraphicNovelS.checked;
     localStorage.setItem('bookSearch', libTechBookSearch)
     localStorage.setItem('bookSearchTitle', libTechBookSearchTitle)
     localStorage.setItem('bookSearchAuthor', libTechBookSearchAuthor)
     localStorage.setItem('bookSearchId', libTechBookSearchId)
     localStorage.setItem('bookDateSearch', libTechDatePubSearch)
-    localStorage.setItem('bookTypeSearch', libTechTypeSearch)
+    localStorage.setItem('bookTypeSearchFiction', libTechTypeSearchFiction)
+    localStorage.setItem('bookTypeSearchNonFiction', libTechTypeSearchNonFiction)
+    localStorage.setItem('bookTypeSearchGraphicNovel', libTechTypeSearchGraphicNovel)
 }
 
 
