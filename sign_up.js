@@ -1,8 +1,10 @@
 
-if (localStorage.getItem("libBooks")){
-    var libBooks = JSON.parse(localStorage.getItem("libBooks"))
+if (localStorage.getItem("accounts")){
+    var accounts = JSON.parse(localStorage.getItem("accounts"))
+    var accountId = JSON.parse(localStorage.getItem("accountId"))
 } else {
-    var libBooks = [];
+    var accounts = []
+    var accountId = 0
 }
 
 if (typeof(Storage) !== "undefined") {
@@ -11,10 +13,22 @@ if (typeof(Storage) !== "undefined") {
     console.log('No webstorage available. Bro is running a browser with a skill issue fr.');
 }
 
-function addNewBook(bookForm){
-    var book = [bookForm.bookTitleL.value, bookForm.bookAuthorL.value, bookForm.bookIdL.value, bookForm.bookDateL.value, bookForm.book_type.value, undefined]
-    libBooks.push(book);
-    localStorage.setItem('libBooks', JSON.stringify(libBooks));
+function createAccount(newAccount){
+    if (newAccount.email.value.includes("@") && newAccount.email.value.includes(".")){
+        if (newAccount.password.value === newAccount.cPassword.value){
+            var user = [accountId, newAccount.email.value.toLowerCase(), newAccount.password.value]
+            accountId++;
+            accounts.push(user);
+            localStorage.setItem('accounts', JSON.stringify(accounts));
+            localStorage.setItem('accountId', JSON.stringify(accountId));
+            alert(`Account Created.\nID: ${accountId}`);
+            location.replace("login.html");
+        } else {
+            alert(`Error: Passwords Do Not Match`);
+        }
+    } else {
+        alert("Error: Please Input An Email");
+    }
 }
 
 

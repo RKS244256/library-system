@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+        <link rel="stylesheet" href="general.css">
+        <script src="login.js"></script>
+    </head>
+    <body onload="checkSession()">
+        <div class="header">
+            <div class="dropdown">
+                <img src="icons/menu-burger.png" class='hbutt' alt="menu">
+                <div id="menu" class="mcontent">
+                    <a href="search.html"><img src="icons/search.png" class='hbutt' alt="search"></a>
+                    <a href="login.html"><img src="icons/lock.png" class='hbutt' alt="login"></a>
+                    <a href="account.html"><img src="icons/user.png" class='hbutt' alt="account"></a>
+                </div>
+            </div>
+            <span style="color:#FF6700;">Login </span>
+        </div>
+        <br>
+        <div class="form-bg">
+            <form> 
+                <br>
+                <center>
+                    <img src="icons/lock.png" alt="lock" width="100px" height="100px">
+                </center>
+                <br>
+                <input class="form-text-input" type="text" name="account" id="account" placeholder="Account ID/Email" required>
+                <br>
+                <input class="form-text-input" type="password" name="password" id="password" placeholder="Password" required>
+                <span style="font-size: 15px; color: #FF6700;">Don't have an account?</span>
+                <span style="font-size: 15px;"><a href="sign_up.html">Click here!</a></span>
+                <br>
+                <button type="submit" onclick="login(this.form)">Login</button>
+            </form>
+        </div>
+    </body>
+</html>

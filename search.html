@@ -1,8 +1,17 @@
 <html>
     <link rel="stylesheet" href="general.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
     <script src="search.js"></script>
     <body>
         <div class="header">
+            <div class="dropdown">
+                <img src="icons/menu-burger.png" class='hbutt' alt="menu">
+                <div id="menu" class="mcontent">
+                    <a href="search.html"><img src="icons/search.png" class='hbutt' alt="search"></a>
+                    <a href="login.html"><img src="icons/lock.png" class='hbutt' alt="login"></a>
+                    <a href="account.html"><img src="icons/user.png" class='hbutt' alt="account"></a>
+                </div>
+            </div>
             <span style="color:#004E98;">Library </span>
             <span>System</span>
         </div>
@@ -12,9 +21,10 @@
             <!-- <form action="search.html" method="get"> -->
                 <label for="searchL" style="color: #FF6700; margin-bottom: 0%; font-size: x-large;"><b>Search</b></label>
                 <br>
-                <input class="form-text-input" type="text" name="search" id="searchS" placeholder="Enter Book Number, Title, or Author" required>
-                <button type="submit" onclick="searchBook(this.form)">Search</button>
-                <br>
+                <div class="search">
+                    <input class="form-text-input" type="text" name="search" id="searchS" placeholder="Enter Book Number, Title, or Author" required>
+                    <button type="submit" onclick="searchBook(this.form)"><img src="icons/search.png" alt="search" width="30px" height="30px"></button>
+                </div>
                 <div class="dropdown">
                     <button type="button">Advanced Search</button>
                     <div id="advancedSearch" class="dcontent">

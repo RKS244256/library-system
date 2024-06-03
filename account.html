@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+        <link rel="stylesheet" href="general.css">
+        <script src="account.js"></script>
+    </head>
+   <body onload="checkSession()">
+    <div class="header">
+            <div class="dropdown">
+                <img src="icons/menu-burger.png" class='hbutt' alt="menu">
+                <div id="menu" class="mcontent">
+                    <a href="search.html"><img src="icons/search.png" class='hbutt' alt="search"></a>
+                    <a href="search.html" onclick="logOut()"><img src="icons/exit.png" class='hbutt' alt="logout"></a>
+                </div>
+            </div>
+            <span style="color:#FF6700;">Welcome User </span>
+            <span id="accountNumber"></span>
+        </div>
+        <br>
+        <h2 style="padding-top: 10px;">Current Borrowed Books:</h2>
+   </body>
+</html>
