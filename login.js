@@ -14,7 +14,7 @@ function login(accountInfo){
         if(exists || exists === 0){
             if(accounts[exists][2] === accountInfo.password.value){
                 alert("Signed in!");
-                var account = [accounts[exists][0], accounts[exists][1], accounts[exists][2]]
+                var account = JSON.stringify([accounts[exists][0], accounts[exists][1], accounts[exists][2], accounts[exists][3]])
                 sessionStorage.setItem("sessionAccount", account);
                 location.replace('account.html')
             }else{
@@ -26,7 +26,11 @@ function login(accountInfo){
     } 
 }
 function checkSession(){
-    if(sessionStorage.getItem("sessionAccount", accounts)){
-        location.replace("account.html");
+    if(sessionStorage.getItem("sessionAccount")){
+        if(JSON.parse(sessionStorage.getItem("sessionAccount"))[3]){
+            location.replace('library_technician_page.html')
+        } else{
+            location.replace('account.html')
+        }
     }
 }

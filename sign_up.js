@@ -16,12 +16,12 @@ if (typeof(Storage) !== "undefined") {
 function createAccount(newAccount){
     if (newAccount.email.value.includes("@") && newAccount.email.value.includes(".")){
         if (newAccount.password.value === newAccount.cPassword.value){
-            var user = [accountId, newAccount.email.value.toLowerCase(), newAccount.password.value]
-            accountId++;
+            var user = [accountId, newAccount.email.value.toLowerCase(), newAccount.password.value, false]
             accounts.push(user);
             localStorage.setItem('accounts', JSON.stringify(accounts));
-            localStorage.setItem('accountId', JSON.stringify(accountId));
             alert(`Account Created.\nID: ${accountId}`);
+            accountId++;
+            localStorage.setItem('accountId', JSON.stringify(accountId));
             location.replace("login.html");
         } else {
             alert(`Error: Passwords Do Not Match`);
