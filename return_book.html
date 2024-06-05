@@ -2,6 +2,7 @@
     <head>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
         <link rel="stylesheet" href="general.css">
+        <script src="return_book.js"></script>
     </head>
     <body>
         <div class="header">
@@ -13,7 +14,7 @@
             <form action="return_book.html" method="get">
                 <input class="form-text-input" type="number" name="book_id" id="bookIdL" placeholder="Book #*" required>
                 <br>
-                <button type="submit">Return</button>
+                <button type="submit" onclick="returnBook(this.form)">Return</button>
             </form>
         </div>
     </body>
