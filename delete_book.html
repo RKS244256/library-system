@@ -2,6 +2,7 @@
     <head>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
         <link rel="stylesheet" href="general.css">
+        <script src="delete_book.js"></script>
     </head> 
     <body>
         <div class="header">
@@ -11,13 +12,13 @@
         </div>
         <br>
         <div class="form-bg">
-            <form action="return_book.html" method="get">
+            <form method="get">
                 <input class="form-text-input" type="number" name="book_id" id="bookIdL" placeholder="Book #*" required>
                 <br>
                 <input type="radio" name="confirm" id="confirmationL" required>
-                <label for="confirmationL"><b>I confirm I wish to permantly delete this book entry</b></label>
+                <label for="confirmationL"><b>I confirm I wish to permanently delete this book entry</b></label>
                 <br>
-                <button type="submit">Delete</button>
+                <button type="submit" onclick="deleteBook(this.form)">Delete</button>
             </form>
         </div>
     </body>
