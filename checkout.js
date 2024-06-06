@@ -10,6 +10,7 @@ function checkout(bookCheckout){
         if(libBooks[i][2] === bookCheckout.bookIdL.value){
             if(libBooks[i][5]){
                 alert("Error: Book is already checked out");
+                return;
             } else {
                 libBooks[i][5] = bookCheckout.userIdL.value
                 localStorage.setItem('libBooks', JSON.stringify(libBooks));

@@ -2,10 +2,16 @@
     <head>
         <link rel="stylesheet" href="general.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+        <script>
+            function logOut(){
+                sessionStorage.clear();
+                alert("Successfully logged out");
+            }
+        </script>
     </head>
     <body>
-        <div class="header">
-
+        <div class="header"></div>
+            <a href="search.html" onclick="logOut()"><img src="icons/exit.png" class='hbutt' alt="logout"></a>
             <span style="color:#004E98;">Welcome</span>
         </div>
         <center>
