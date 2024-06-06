@@ -1,4 +1,7 @@
 function deleteBook(bookDelete){
+    if(!bookDelete.confirmationL.checked){
+        return;
+    }
     if (localStorage.getItem("libBooks")){
         var libBooks = JSON.parse(localStorage.getItem("libBooks"))
     } else {
