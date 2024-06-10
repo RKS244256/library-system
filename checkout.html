@@ -1,8 +1,8 @@
 <html>
     <head>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-        <link rel="stylesheet" href="general.css">
-        <script src="checkout.js"></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway"><!--For the Raleway font-->
+        <link rel="stylesheet" href="general.css"><!--For site theming-->
+        <script src="checkout.js"></script><!--Allows the site to use functions within the checkout JS script-->
     </head>
     <body>
         <div class="header">
@@ -11,13 +11,13 @@
         </div>
         <br>
         <div class="form-bg">
-            <form action="checkout.html" method="get">
-                <input class="form-text-input" type="number" name="book_id" id="bookIdL" placeholder="Book #*" required>
+            <form><!--Creates new form-->
+                <input class="form-text-input" type="number" name="book_id" id="bookIdL" placeholder="Book ID*" required><!--An input field for a specified book id-->
                 <br>
-                <input class="form-text-input" type="number" name="user_id" id="userIdL" placeholder="User ID">
+                <input class="form-text-input" type="number" name="user_id" id="userIdL" placeholder="User ID"><!--An input field for a specified user id-->
                 <br>
                 <br>
-                <button type="submit" onclick="checkout(this.form)">Checkout</button>
+                <button type="submit" onclick="checkout(this.form)">Checkout</button><!--Submits the form using the GET method whilst running the checkout function, passing in the form's data as an argument-->
         </div>
             </form>
         </div>

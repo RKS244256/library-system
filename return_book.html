@@ -1,8 +1,8 @@
 <html>
     <head>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-        <link rel="stylesheet" href="general.css">
-        <script src="return_book.js"></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway"><!--For the Raleway font family-->
+        <link rel="stylesheet" href="general.css"><!--For site theming-->
+        <script src="return_book.js"></script><!--Allows page to use functions within the return_book JS script-->
     </head>
     <body>
         <div class="header">
@@ -12,9 +12,9 @@
         <br>
         <div class="form-bg">
             <form action="return_book.html" method="get">
-                <input class="form-text-input" type="number" name="book_id" id="bookIdL" placeholder="Book #*" required>
+                <input class="form-text-input" type="number" name="book_id" id="bookIdL" placeholder="Book #*" required><!--An input field for a library technician to input a book ID-->
                 <br>
-                <button type="submit" onclick="returnBook(this.form)">Return</button>
+                <button type="submit" onclick="returnBook(this.form)">Return</button><!--Submits form using the GET method and runs the returnBook function, passing the form data as an argument-->
             </form>
         </div>
     </body>

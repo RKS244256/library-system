@@ -1,8 +1,8 @@
 <html>
     <head>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-        <link rel="stylesheet" href="general.css">
-        <script src="delete_book.js"></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway"><!--For the Raleway font family-->
+        <link rel="stylesheet" href="general.css"><!--For site theming-->
+        <script src="delete_book.js"></script><!--Allows page to use functions within the delete_book JS script-->
     </head> 
     <body>
         <div class="header">
@@ -13,12 +13,12 @@
         <br>
         <div class="form-bg">
             <form method="get">
-                <input class="form-text-input" type="number" name="book_id" id="bookIdL" placeholder="Book #*" required>
+                <input class="form-text-input" type="number" name="book_id" id="bookIdL" placeholder="Book #*" required><!--Input field for a book ID-->
                 <br>
-                <input type="checkbox" name="confirm" id="confirmationL" required>
+                <input type="checkbox" name="confirm" id="confirmationL" required> <!--Confirmation checkbox to confirm the deletion of a book-->
                 <label for="confirmationL"><b>I confirm I wish to permanently delete this book entry</b></label>
                 <br>
-                <button type="submit" onclick="deleteBook(this.form)">Delete</button>
+                <button type="submit" onclick="deleteBook(this.form)">Delete</button><!--Submits form using the GET method and runs the deleteBook function, passing the form data as an argument-->
             </form>
         </div>
     </body>

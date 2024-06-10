@@ -1,3 +1,5 @@
+//Define global variables
+
 var libTechBookTitleSearch;
 var libTechAuthorSearch;
 var libTechBookIDSearch;
@@ -7,46 +9,23 @@ var libTechTypeSearchNonFiction;
 var libTechTypeSearchGraphicNovel;
 var libTechBookSearchMode;
 
-// var libTechBookSearch
-
-// var libTechCover;
-
-if (typeof(Storage) !== "undefined") {
-    console.log('Woah, you have a browser that\'s not from 1995')
-} else {
-    console.log('No webstorage available. Bro is running a browser with a skill issue fr.')
-}
-
-// function searchBook(bookForm){
-//     libTechBookTitleSearch = bookForm.bookTitleL.value;
-//     libTechAuthorSearch = bookForm.bookAuthorL.value;
-//     libTechBookIDSearch = bookForm.bookIdL.value;
-//     libTechDatePubSearch = bookForm.bookDateL.value;
-//     libTechTypeSearch = bookForm.book_type.value;
-//     localStorage.setItem('bookTitlesSearch', libTechBookTitleSearch.toLowerCase())
-//     localStorage.setItem('bookAuthorsSearch', libTechAuthorSearch.toLowerCase())
-//     localStorage.setItem('bookIDsSearch', libTechBookIDSearch.toLowerCase())
-//     localStorage.setItem('bookDateSearch', libTechDatePubSearch.toLowerCase())
-//     localStorage.setItem('bookTypeSearch', libTechTypeSearch.toLowerCase())
-// }
-
-function searchBook(bookForm){
-    libTechBookSearch = bookForm.searchS.value;
-    libTechBookSearchTitle = bookForm.searchModeTitleS.checked;
-    libTechBookSearchAuthor = bookForm.searchModeAuthorS.checked;
-    libTechBookSearchId = bookForm.searchModeIdS.checked;
-    libTechDatePubSearch = bookForm.bookDateS.value;
-    libTechTypeSearchFiction = bookForm.bookTypeFictionS.checked;
-    libTechTypeSearchNonFiction = bookForm.bookTypeNonFictionS.checked;
-    libTechTypeSearchGraphicNovel = bookForm.bookTypeGraphicNovelS.checked;
-    localStorage.setItem('bookSearch', libTechBookSearch)
-    localStorage.setItem('bookSearchTitle', libTechBookSearchTitle)
-    localStorage.setItem('bookSearchAuthor', libTechBookSearchAuthor)
-    localStorage.setItem('bookSearchId', libTechBookSearchId)
-    localStorage.setItem('bookDateSearch', libTechDatePubSearch)
-    localStorage.setItem('bookTypeSearchFiction', libTechTypeSearchFiction)
-    localStorage.setItem('bookTypeSearchNonFiction', libTechTypeSearchNonFiction)
-    localStorage.setItem('bookTypeSearchGraphicNovel', libTechTypeSearchGraphicNovel)
+function searchBook(bookForm){//Declares a function with the bookForm argument for an HTML form.
+    libTechBookSearch = bookForm.searchS.value;//Defines the general search query as libTechBookSearch
+    libTechBookSearchTitle = bookForm.searchModeTitleS.checked;//Defines  the title criteria  as  libTechBookSearchTitle
+    libTechBookSearchAuthor = bookForm.searchModeAuthorS.checked;//Defines  the author criteria  as  libTechBookSearchAuthor
+    libTechBookSearchId = bookForm.searchModeIdS.checked;//Defines  the ID criteria  as  libTechBookSearchId
+    libTechDatePubSearch = bookForm.bookDateS.value;//Defines  the specified published date as  libTechDatePubSearch
+    libTechTypeSearchFiction = bookForm.bookTypeFictionS.checked;//Defines  the fiction specifier as  libTechBookSearchFiction
+    libTechTypeSearchNonFiction = bookForm.bookTypeNonFictionS.checked;//Defines  the nonfiction specifier as  libTechBookSearchNonFiction
+    libTechTypeSearchGraphicNovel = bookForm.bookTypeGraphicNovelS.checked;//Defines  the graphic novel specifier as  libTechBookSearchGraphicNovel
+    localStorage.setItem('bookSearch', libTechBookSearch);//Stores  libTechBookSearch to local storage
+    localStorage.setItem('bookSearchTitle', libTechBookSearchTitle);//Stores  libTechBookSearchTitle to local storage
+    localStorage.setItem('bookSearchAuthor', libTechBookSearchAuthor);//Stores  libTechBookSearchAuthor to local storage
+    localStorage.setItem('bookSearchId', libTechBookSearchId);//Stores  libTechBookSearchId to local storage
+    localStorage.setItem('bookDateSearch', libTechDatePubSearch);//Stores  libTechDatePubSearch to local storage
+    localStorage.setItem('bookTypeSearchFiction', libTechTypeSearchFiction);//Stores  libTechTypeSearchFiction to local storage
+    localStorage.setItem('bookTypeSearchNonFiction', libTechTypeSearchNonFiction);//Stores  libTechTypeSearchNonFiction to local storage
+    localStorage.setItem('bookTypeSearchGraphicNovel', libTechTypeSearchGraphicNovel);//Stores  libTechTypeSearchGraphicNovel to local storage
 }
 
 

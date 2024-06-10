@@ -1,8 +1,8 @@
 <html>
     <head>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-        <link rel="stylesheet" href="general.css">
-        <script src="sign_up.js"></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway"><!--For the Raleway font family-->
+        <link rel="stylesheet" href="general.css"><!--For site theming-->
+        <script src="sign_up.js"></script><!--Allows page to use functions within the sign_up JS script-->
     </head>
     <body>
         <div class="header">
@@ -19,21 +19,21 @@
         </div>
         <br>
         <div class="form-bg">
-            <form action="login.html"> 
+            <form action="login.html"> <!--Creates a new form-->
                 <br>
                 <center>
                     <img src="icons/lock.png" alt="lock" width="100px" height="100px">
                 </center>
                 <br>
-                <input class="form-text-input" type="email" name="email" id="email" placeholder="Email" required>
+                <input class="form-text-input" type="email" name="email" id="email" placeholder="Email" required><!--Input field for an email-->
                 <br>
-                <input class="form-text-input" type="password" name="password" id="password" placeholder="Password" required>
+                <input class="form-text-input" type="password" name="password" id="password" placeholder="Password" required><!--Input field for a password-->
                 <br>
-                <input class="form-text-input" type="password" name="c_password" id="cPassword" placeholder="Confirm Password" required>
+                <input class="form-text-input" type="password" name="c_password" id="cPassword" placeholder="Confirm Password" required><!--Input field for a confirmation of the above password field.-->
                 <span style="font-size: 15px; color: #FF6700;">Have an account?</span>
                 <span style="font-size: 15px;"><a href="login.html">Click here!</a></span>
                 <br>
-                <button type="submit" onclick="createAccount(this.form)">Create Account</button>
+                <button type="submit" onclick="createAccount(this.form)">Create Account</button><!--Submits the form using the GET method while also running the createAccount function, passing in the form as an argument-->
             </form>
         </div>
     </body>

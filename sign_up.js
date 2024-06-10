@@ -1,33 +1,28 @@
 
-if (localStorage.getItem("accounts")){
-    var accounts = JSON.parse(localStorage.getItem("accounts"))
-    var accountId = JSON.parse(localStorage.getItem("accountId"))
+if (localStorage.getItem("accounts")){//Determines if any accounts exist
+    var accounts = JSON.parse(localStorage.getItem("accounts"))//Parses account value from local storage and stores it in the accounts variable as an array.
+    var accountId = JSON.parse(localStorage.getItem("accountId"))//Parses accountId value from local storage and stores it in the accountId variable as an integer.
 } else {
+    //Defines new variables in lieu of an existing array
     var accounts = []
     var accountId = 0
 }
 
-if (typeof(Storage) !== "undefined") {
-    console.log('Woah, you have a browser that\'s not from 1995');
-} else {
-    console.log('No webstorage available. Bro is running a browser with a skill issue fr.');
-}
-
-function createAccount(newAccount){
-    if (newAccount.email.value.includes("@") && newAccount.email.value.includes(".")){
-        if (newAccount.password.value === newAccount.cPassword.value){
-            var user = [accountId, newAccount.email.value.toLowerCase(), newAccount.password.value, false]
-            accounts.push(user);
-            localStorage.setItem('accounts', JSON.stringify(accounts));
-            alert(`Account Created.\nID: ${accountId}`);
-            accountId++;
-            localStorage.setItem('accountId', JSON.stringify(accountId));
-            location.replace("login.html");
+function createAccount(newAccount){//Declares a function with the newAccount argument for an HTML form.
+    if (newAccount.email.value.includes("@") && newAccount.email.value.includes(".")){//Determines whether the email is an actual email by searching for an "@"
+        if (newAccount.password.value === newAccount.cPassword.value){//Checks whether both password fields match
+            var user = [accountId, newAccount.email.value.toLowerCase(), newAccount.password.value, false]//Creates a new array with the entered account information
+            accounts.push(user);//Pushes the new array into the accounts array.
+            localStorage.setItem('accounts', JSON.stringify(accounts));//Overwrites the accounts key in local storage with the modified accounts array.
+            alert(`Account Created.\nID: ${accountId}`);//Notifies the user their account has been created along with what their user id is.
+            accountId++;//Increments the accountId integer
+            localStorage.setItem('accountId', JSON.stringify(accountId));//Overwrites the accountsId key in local storage with the modified accountId integer.
+            location.replace("login.html");//Redirects to the login page
         } else {
-            alert(`Error: Passwords Do Not Match`);
+            alert(`Error: Passwords Do Not Match`);//Alerts the user if the passwords don't match
         }
     } else {
-        alert("Error: Please Input An Email");
+        alert("Error: Please Input An Email");//Prompts the user to enter a proper email.
     }
 }
 

@@ -1,10 +1,10 @@
 <html>
     <head>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-        <link rel="stylesheet" href="general.css">
-        <script src="login.js"></script>
+        <link rel="stylesheet" href="general.css"><!--For site theming-->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway"><!--For the Raleway font family-->
+        <script src="login.js"></script><!--Allows this page to use the functions in the login JS script-->
     </head>
-    <body onload="checkSession()">
+    <body onload="checkSession()"><!--Runs the checkSession function when the body loads.-->
         <div class="header">
             <div class="dropdown">
                 <img src="icons/menu-burger.png" class='hbutt' alt="menu">
@@ -18,19 +18,19 @@
         </div>
         <br>
         <div class="form-bg">
-            <form> 
+            <form> <!--Creates a new form-->
                 <br>
                 <center>
                     <img src="icons/lock.png" alt="lock" width="100px" height="100px">
                 </center>
                 <br>
-                <input class="form-text-input" type="text" name="account" id="account" placeholder="Account ID/Email" required>
+                <input class="form-text-input" type="text" name="account" id="account" placeholder="Account ID/Email" required><!--An input field for a user ID or account email-->
                 <br>
-                <input class="form-text-input" type="password" name="password" id="password" placeholder="Password" required>
+                <input class="form-text-input" type="password" name="password" id="password" placeholder="Password" required><!--An input field for a password-->
                 <span style="font-size: 15px; color: #FF6700;">Don't have an account?</span>
                 <span style="font-size: 15px;"><a href="sign_up.html">Click here!</a></span>
                 <br>
-                <button type="button" onclick="login(this.form)">Login</button>
+                <button type="button" onclick="login(this.form)">Login</button><!--Submits the form whilst running the login function, passing in the form data as an argument-->
             </form>
         </div>
     </body>

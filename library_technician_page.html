@@ -1,17 +1,17 @@
 <html>
     <head>
-        <link rel="stylesheet" href="general.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-        <script>
-            function logOut(){
-                sessionStorage.clear();
-                alert("Successfully logged out");
+        <link rel="stylesheet" href="general.css"><!--For site theming-->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway"><!--For the Raleway font family-->
+        <script>//As there's no real reason to have another file for one small function, this function is stored in the script tag of the HTML document.
+            function logOut(){//Declares the logOut function
+                sessionStorage.clear();//Clears session storage and therefore the login session for the user
+                alert("Successfully logged out");//Alerts the user (in this case library technician) they've logged out.
             }
         </script>
     </head>
     <body>
         <div class="header"></div>
-            <a href="search.html" onclick="logOut()"><img src="icons/exit.png" class='hbutt' alt="logout"></a>
+            <a href="search.html" onclick="logOut()"><img src="icons/exit.png" class='hbutt' alt="logout"></a><!--Runs the logOut function when clicked-->
             <span style="color:#004E98;">Welcome</span>
         </div>
         <center>

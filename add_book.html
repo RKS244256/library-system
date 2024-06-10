@@ -1,8 +1,8 @@
 <html>
     <head>
-        <script src="add_book.js"></script>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-        <link rel="stylesheet" href="general.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway"><!--For the Raleway font-->
+        <link rel="stylesheet" href="general.css"><!--For site theming-->
+        <script src="add_book.js"></script><!--Allows the page to use the functions within the add_book js script-->
     </head>
     <body>
         <div class="header">
@@ -11,17 +11,16 @@
             <span>Book</span>
         </div>
         <br>
-        <!-- REPLACE V -->
         <div class="form-bg">
-            <form> 
-                <input class="form-text-input" type="text" name="title" id="bookTitleL" placeholder="Title" required>
+            <form> <!--Creates a new form-->
+                <input class="form-text-input" type="text" name="title" id="bookTitleL" placeholder="Title" required><!--An input field for the book title-->
                 <br>
-                <input class="form-text-input" type="text" name="author" id="bookAuthorL" placeholder="Author" required>
+                <input class="form-text-input" type="text" name="author" id="bookAuthorL" placeholder="Author" required> <!--An input field for the book's author-->
                 <br>
-                <input class="form-text-input" type="number" name="book_id" id="bookIdL" placeholder="Book #" required>
+                <input class="form-text-input" type="number" name="book_id" id="bookIdL" placeholder="Book #" required> <!--An input field for the book's id-->
                 <br>
-                <label for="bookDateL">Date Published:</label>
-                <select name="bookDate" id="bookDateL">
+                <label for="bookDateL">Date Published:</label> 
+                <select name="bookDate" id="bookDateL"> <!--A dropdown with date ranges for dates published.-->
                     <option value="-2000">Before 2000</option>
                     <option value="2001-2005">2001-2005</option>
                     <option value="2006-2010">2006-2010</option>
@@ -32,14 +31,14 @@
                 <br>
                 <label for="bookTypeFictionL">Book Type:</label>
                 <br>
-                <input type="radio" name="book_type" id="bookTypeFictionL" value="fiction">
+                <input type="radio" name="book_type" id="bookTypeFictionL" value="fiction"> <!--A radio button with the value of fiction. It's link to the other radio buttons via its name-->
                 <label for="bookTypeFictionL">Fiction</label>
-                <input type="radio" name="book_type" id="bookTypeNonFictionL" value="nonfiction">
+                <input type="radio" name="book_type" id="bookTypeNonFictionL" value="nonfiction"><!--A radio button with the value of nonfiction. It's link to the other radio buttons via its name-->
                 <label for="bookTypeNonFictionL">Non-Fiction</label>
-                <input type="radio" name="book_type" id="bookTypeGraphicNovelL" value="graphicnovel">
+                <input type="radio" name="book_type" id="bookTypeGraphicNovelL" value="graphicnovel"><!--A radio button with the value of graphicnovel. It's link to the other radio buttons via its name-->
                 <label for="bookTypeGraphicNovelL">Graphic Novel</label>
                 <br>
-                <button type="submit" onclick="addNewBook(this.form)">Submit</button>
+                <button type="submit" onclick="addNewBook(this.form)">Submit</button><!--Submits the form using the GET method while also running the addNewBook function, passing in the form as an argument-->
             </form>
         </div>
     </body>

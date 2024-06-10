@@ -1,20 +1,14 @@
 
-if (localStorage.getItem("libBooks")){
-    var libBooks = JSON.parse(localStorage.getItem("libBooks"))
+if (localStorage.getItem("libBooks")){ //Checks whether the libBooks key exists in local storage.
+    var libBooks = JSON.parse(localStorage.getItem("libBooks")) //If so, it parses the string into a usable array and stores it in the libBooks variable
 } else {
-    var libBooks = [];
+    var libBooks = []; //If not, creates a new empty array.
 }
 
-if (typeof(Storage) !== "undefined") {
-    console.log('Woah, you have a browser that\'s not from 1995');
-} else {
-    console.log('No webstorage available. Bro is running a browser with a skill issue fr.');
-}
-
-function addNewBook(bookForm){
-    var book = [bookForm.bookTitleL.value, bookForm.bookAuthorL.value, bookForm.bookIdL.value, bookForm.bookDateL.value, bookForm.book_type.value, undefined]
-    libBooks.push(book);
-    localStorage.setItem('libBooks', JSON.stringify(libBooks));
+function addNewBook(bookForm){//Declares the addNewBook function with an argument for an HTML form.
+    var book = [bookForm.bookTitleL.value, bookForm.bookAuthorL.value, bookForm.bookIdL.value, bookForm.bookDateL.value, bookForm.book_type.value, undefined] //Stores the information from the form into a new variable to push into the array storing all books (libBooks)
+    libBooks.push(book);//Pushes the book we just created into the libBooks array
+    localStorage.setItem('libBooks', JSON.stringify(libBooks)); //Converts the libBooks array into a string then stores it in local storage with the libBook key.
 }
 
 

@@ -1,12 +1,14 @@
+<!--Only exists for Github Pages as I wanted to preserve the html file names while also allowing users to access the website from the root url-->
 <html>
     <head>
         <script>
-            function redirect(){
-                location.replace("search.html")
+            function redirect(){//Declares the redirect function
+                location.replace("search.html");//Redirects to search.html
             }
         </script>
     </head>
-    <body onload="redirect()">
-        <p>Whoops, redirect failed :P</p>
+    <body onload="redirect()"><!--Runs the redirect function when the body loads-->
+        <p>Whoops, redirect failed :P</p><!--If it fails, this will display instead.-->
+        <a href="search.html">Click here</a>
     </body>
 </html>

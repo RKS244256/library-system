@@ -1,7 +1,7 @@
 <html>
-    <link rel="stylesheet" href="general.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-    <script src="search.js"></script>
+    <link rel="stylesheet" href="general.css"><!--For site theming-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway"><!--For the Raleway font family-->
+    <script src="search.js"></script><!--Allows page to use functions within the search JS script-->
     <body>
         <div class="header">
             <div class="dropdown">
@@ -17,27 +17,26 @@
         </div>
         <br>
         <div style="margin: auto; width: fit-content;">
-            <form action="result.html">
-            <!-- <form action="search.html" method="get"> -->
+            <form action="result.html"><!--Creates a new form-->
                 <label for="searchL" style="color: #FF6700; margin-bottom: 0%; font-size: x-large;"><b>Search</b></label>
                 <br>
                 <div class="search">
-                    <input class="form-text-input" type="text" name="search" id="searchS" placeholder="Enter Book Number, Title, or Author" required>
-                    <button type="submit" onclick="searchBook(this.form)"><img src="icons/search.png" alt="search" width="30px" height="30px"></button>
+                    <input class="form-text-input" type="text" name="search" id="searchS" placeholder="Enter Book Number, Title, or Author" required><!--An input field for a general search of the book ID, title, or author-->
+                    <button type="submit" onclick="searchBook(this.form)"><img src="icons/search.png" alt="search" width="30px" height="30px"></button><!--Submits the form using the GET method while also running the searchBook function, passing in the form as an argument-->
                 </div>
                 <div class="dropdown">
                     <button type="button">Advanced Search</button>
                     <div id="advancedSearch" class="dcontent">
                         <label>Search Type:</label>
                         <br>
-                        <input type="checkbox" name="title_mode" id="searchModeTitleS" value="title">
+                        <input type="checkbox" name="title_mode" id="searchModeTitleS" value="title"><!--A checkbox for indicating what a user would want to specifically search using the general search bar. (In this case, it specifies titles)-->
                         <label for="searchModeTitleS">Title</label>
-                        <input type="checkbox" name="author_mode" id="searchModeAuthorS" value="author">
+                        <input type="checkbox" name="author_mode" id="searchModeAuthorS" value="author"><!--A checkbox for indicating what a user would want to specifically search using the general search bar. (In this case, it specifies authors)-->
                         <label for="searchModeAuthorS">Author</label>
-                        <input type="checkbox" name="id_mode" id="searchModeIdS" value="id">
+                        <input type="checkbox" name="id_mode" id="searchModeIdS" value="id"><!--A checkbox for indicating what a user would want to specifically search using the general search bar. (In this case, it specifies IDs)-->
                         <label for="searchModeIdS">Book ID</label>
                         <br>
-                        <label for="bookDateS">Published Date:</label>
+                        <label for="bookDateS">Published Date:</label><!--A dropdown for searching for books that were published during a specific range.-->
                         <select name="bookDate" id="bookDateS">
                             <option value="na" selected>Select Publication Date</option>
                             <option value="-2000">Before 2000</option>
@@ -50,11 +49,11 @@
                         <br>
                         <label for="bookTypeFictionL">Book Type:</label>
                         <br>
-                        <input type="checkbox" name="fiction_type" id="bookTypeFictionS" value="fiction">
+                        <input type="checkbox" name="fiction_type" id="bookTypeFictionS" value="fiction"><!--A checkbox for searching for books that are categorized as fiction-->
                         <label for="bookTypeFictionS">Fiction</label>
-                        <input type="checkbox" name="nonfiction_type" id="bookTypeNonFictionS" value="nonfiction">
+                        <input type="checkbox" name="nonfiction_type" id="bookTypeNonFictionS" value="nonfiction"><!--A checkbox for searching for books that are categorized as non fiction-->
                         <label for="bookTypeNonFictionS">Non-Fiction</label>
-                        <input type="checkbox" name="graphicnovel_type" id="bookTypeGraphicNovelS" value="graphicnovel">
+                        <input type="checkbox" name="graphicnovel_type" id="bookTypeGraphicNovelS" value="graphicnovel"><!--A checkbox for searching for books that are categorized as graphic novels-->
                         <label for="bookTypeGraphicNovelS">Graphic Novel</label>
                     </div>
                 </div>
