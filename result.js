@@ -14,7 +14,7 @@ let results = [];//Creates an array which will be used to store matching books
 function displaySpecificResult(){//Declares the displaySpecificResult function
     for(i=0;i<libBooks.length;i++){//Iterates through the libBooks array
         var accepted;//Defines a new variable to keep track and determine whether a book is a match.
-        if(bookSearchTitle === "true" && bookSearch === libBooks[i][0].toLowerCase()){//Determines whether the user specifies to only search book title and if so, see if the book's title matches the search input
+        if(bookSearchTitle === "true" && bookSearch === libBooks[i][0].toLowerCase()){//Detexrmines whether the user specifies to only search book title and if so, see if the book's title matches the search input
             accepted = true;//Marks the book as a match
         }  else {
             accepted = false;//Marks the book as not a match (yet)

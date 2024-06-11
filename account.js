@@ -10,7 +10,7 @@ function runtime(){
 }
 
 function checkSession(){
-    if(sessionAccount && sessionAccount[3] === null){//Checks if the sessionAccount exists and whether the 3rd element of the sessionAccount array (responsible for determining whether an account has admin privileges) is null (the default value). 
+    if(sessionAccount && sessionAccount[3] === false){//Checks if the sessionAccount exists and whether the 3rd element of the sessionAccount array (responsible for determining whether an account has admin privileges) is null (the default value). 
         document.getElementById("accountNumber").innerHTML = `#${sessionAccount[0]}` //Displays the account's ID number on the accounts page within the accountNumber span element. No redirects required!
     } else if(sessionAccount && sessionAccount[3]){//Checks if the sessionAccount exists and whether the third element of the sessionAccount array (responsible for determining whether an account has admin privileges) is True.
         location.replace("library_technician_page.html")//Redirects to the library technician page.
